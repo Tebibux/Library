@@ -1,4 +1,4 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -6,36 +6,106 @@
 	font-size: 18px;
 	list-style: none;
 }
-body{
+
+body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
 }
-.container{
-	width: 1200px;
+
+.container {
 	height: 100%;
-	background-color: blanchedalmond;
-	display: grid;
-	grid-template-rows: 75px 1fr 65px;
+	width: 1000px;
+	display: flex;
+	flex-direction: column;
 }
+
 /*	header starts here	*/
-.header{
-	width: 100%;
-	height: 75px;
+.header {
+	height: 60px;
 	background-color: #AFCADA;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.header > h1{
+
+.header>h1 {
 	font-size: 2rem;
 	font-weight: bolder;
-	font-family:'Courier New', Courier, monospace;
+	font-family: 'Courier New', Courier, monospace;
 }
-.main{
-	background-color: #afdab63d;
+
+/*	header ends here  */
+/*	main ends here  */
+.main {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
 }
-.footer{
+
+.main-left {
+	margin: 10px 0 -10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.book {
+	margin: 10px;
+	width: 210px;
+	height: 150px;
+	box-shadow: 5px 2px 8px 0px rgba(0, 0, 0, 0.54);
+}
+.book-description > ul > li{
+	display: flex;
+	flex-direction: column;
+	padding: 10px 15px;
+	justify-content: space-evenly;
+}
+.book > ul{
+	display: flex;
+	flex-direction: column;
+	padding-left: 5px;
+	padding-top: 10px;
+	align-items: flex-start;
+}
+
+.main-right {
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.book-description {
+	margin: 10px;
+	width: 240px;
+	height: 350px;
+
+	box-shadow: 5px 2px 8px 0px rgba(0, 0, 0, 0.54);
+}
+
+button {
+	height: 40px;
+	width: 60%;
+	border-style: none;
+	box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.254);
+}
+button:hover{
+
+	background-color: #AFCADA;
+}
+/*	main ends here  */
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: inherit;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: #AFCADA;
 }
