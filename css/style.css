@@ -57,13 +57,8 @@ body {
 	height: 150px;
 	box-shadow: 5px 2px 8px 0px rgba(0, 0, 0, 0.54);
 }
-.book-description > ul > li{
-	display: flex;
-	flex-direction: column;
-	padding: 10px 15px;
-	justify-content: space-evenly;
-}
-.book > ul{
+
+.book>ul {
 	display: flex;
 	flex-direction: column;
 	padding-left: 5px;
@@ -79,12 +74,37 @@ body {
 	gap: 20px;
 }
 
-.book-description {
-	margin: 10px;
-	width: 240px;
-	height: 350px;
+.book-discription {
+	height: 120%;
+	box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.254);
+}
 
-	box-shadow: 5px 2px 8px 0px rgba(0, 0, 0, 0.54);
+.book-discription>form>ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.book-discription>form>ul>li {
+	width: 80%;
+	padding-left: 10px;
+	height: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+input {
+	height: inherit;
+}
+
+label {
+	margin: 2px 0;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+textarea {
+	height: 50px;
 }
 
 button {
@@ -93,10 +113,12 @@ button {
 	border-style: none;
 	box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.254);
 }
-button:hover{
+
+button:hover {
 
 	background-color: #AFCADA;
 }
+
 /*	main ends here  */
 
 .footer {
