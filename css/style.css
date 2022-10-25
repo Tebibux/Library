@@ -79,12 +79,12 @@ body {
 	box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.254);
 }
 
-.book-discription>form>ul {
+.book-discription>ul {
 	display: flex;
 	flex-direction: column;
 }
 
-.book-discription>form>ul>li {
+.book-discription>ul>li {
 	width: 80%;
 	padding-left: 10px;
 	height: 60px;
@@ -107,11 +107,13 @@ textarea {
 	height: 50px;
 }
 
-button {
+form>button {
+	margin-top: 20px;
 	height: 40px;
-	width: 60%;
+	width: 100%;
+	font-weight: bold;
 	border-style: none;
-	box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.254);
+	box-shadow: 2px 4px 3px 0px rgba(0, 0, 0, 0.254);
 }
 
 button:hover {
