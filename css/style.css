@@ -61,11 +61,19 @@ body {
 .book>ul {
 	display: flex;
 	flex-direction: column;
-	padding-left: 5px;
+	padding-left: 15px;
 	padding-top: 10px;
 	align-items: flex-start;
 }
-
+.book > ul > li{
+	padding-top: 4px;
+	font-weight: bold;
+}
+.book > ul > li:first-child{
+	padding-top: 0px;
+	font-weight: bold;
+	color: rgba(7, 131, 46, 0.842);
+}
 .main-right {
 	margin: 10px;
 	display: flex;
