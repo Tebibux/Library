@@ -3,8 +3,10 @@ let myLibrary = [];
 // Call the HTML book shelf element as Shelf
 const shelf = document.querySelector('.main-left');
 // calling the button
-const subBtn = document.querySelector('#button')
-
+const button = document.getElementById('button')
+// input values
+const inputTitle = document.getElementById('title');
+console.log(title.value)
 function Book(title, author, page, date, comment) {
 	// the constructor...
 	this.title = title;
@@ -52,10 +54,14 @@ myLibrary.forEach(books => {
 	let cPara = document.createElement('li');
 	cPara.innerText = `Comment: ${books.comment}`
 	uList.append(cPara);
-	
+
 	// console.table(books.author);
 })
 
+button.addEventListener('click', addBook);
 
+function addBook(){
+	console.table(myLibrary[0])
+}
 
 // console.table(myLibrary);
