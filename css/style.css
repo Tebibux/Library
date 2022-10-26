@@ -112,11 +112,19 @@ label {
 }
 
 textarea {
-	height: 50px;
+	height: 70px;
 }
 
 form>button {
 	margin-top: 20px;
+	height: 40px;
+	width: 100%;
+	font-weight: bold;
+	border-style: none;
+	box-shadow: 2px 4px 3px 0px rgba(0, 0, 0, 0.254);
+}
+button {
+	margin-top: 10px;
 	height: 40px;
 	width: 100%;
 	font-weight: bold;
