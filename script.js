@@ -10,14 +10,7 @@ function Book(title, author, page, date, comment) {
 	this.comment = comment;
 };
 
-
-
-function addBookToLibrary() {
-	let title = `${domTitle.value}`;
-	let author = `${domAuthor.value}`;
-	let page = `${domPage.value}`;
-	let date = `${domDate.value}`;
-	let comment = `${domComment.value}`;
+function addBookToLibrary(title, author, page, date, comment) {
 	let newBook = new Book(title, author, page, date, comment);
 	myLibrary.push(newBook);
 }
