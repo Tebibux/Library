@@ -1,23 +1,13 @@
-// retrieving  DOM element
-
-const domTitle = document.getElementById('title');
-const domAuthor = document.getElementById('author');
-const domPage = document.getElementById('page');
-const domDate = document.getElementById('date');
-const domComment = document.getElementById('comment');
-const subBtn = document.querySelector('#button');
-
-
-
+// local library array to store data 
 let myLibrary = [];
 
 function Book(title, author, page, date, comment) {
-  // the constructor...
-  this.title = title;
-  this.author = author;
-  this.page = page;
-  this.date = date;
-  this.comment = comment;
+	// the constructor...
+	this.title = title;
+	this.author = author;
+	this.page = page;
+	this.date = date;
+	this.comment = comment;
 };
 
 
@@ -29,14 +19,11 @@ function addBookToLibrary() {
 	let date = `${domDate.value}`;
 	let comment = `${domComment.value}`;
 	let newBook = new Book(title, author, page, date, comment);
-	
 	myLibrary.push(newBook);
-	console.table(myLibrary)
-	// addDom();
 }
 
-subBtn.addEventListener('click', addBookToLibrary);
+addBookToLibrary('T-she Hussien', 'Bogale Teferi', 195, 1990, 'scarey book');
+addBookToLibrary('Yoratorad', 'Yismake', 100, 1998, 'Fantacy');
+addBookToLibrary('Tebegna Ewnetoch', 'Betty', 200, 2000, 'critics book');
 
-// function addDom(){
-// 	console.log('hello')
-// }
+console.table(myLibrary);
