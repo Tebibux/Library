@@ -80,6 +80,7 @@ function addToDom() {
 			book.append(readBtn);
 			// creating unordered list
 			let uList = document.createElement('ul');
+			uList.className = 'book-list';
 			book.append(uList);
 
 			// creating list Items
