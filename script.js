@@ -70,9 +70,14 @@ function addToDom() {
 			shelf.append(book);
 			book.id = `${books.title}`;
 			// create Read button
-			let redBtn = document.createElement('button');
-			redBtn.innerText = 'Read';
-			book.append(redBtn);
+			let readBtn = document.createElement('button');
+			readBtn.innerText = 'Not Read';
+			readBtn.style.backgroundColor = 'red';
+			readBtn.addEventListener('click', () => {
+				readBtn.innerText = 'Read';
+				readBtn.style.backgroundColor = 'green';
+			})
+			book.append(readBtn);
 			// creating unordered list
 			let uList = document.createElement('ul');
 			book.append(uList);
