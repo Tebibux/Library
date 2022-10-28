@@ -58,6 +58,7 @@ function addBook() {
 		addBookToLibrary(ttl, auth, pg, dt, cmt);
 	}
 }
+// let index = 0;
 
 function addToDom() {
 	myLibrary.forEach(books => {
@@ -101,17 +102,19 @@ function addToDom() {
 			// delete button
 			let delBtn = document.createElement('button');
 			delBtn.innerText = 'Delete Book';
+			delBtn.dataset.remElem = `${book.id}`;
+			// delBtn.dataset.removeElem = index;
 			delBtn.addEventListener('click', () => {
 				{
-					console.log(book.id);
-					if (myLibrary.includes(books)) {
-						newLibrary = myLibrary.filter((book) => {
-							return book.id == books.title
-						})
-						myLibrary.pop(newLibrary[0]);
-						shelf.innerHTML = '';
-						addToDom()
-					}
+					// ___ return a new library list filtered of the deleted element _____
+					newLibrary = myLibrary.filter((b) => b.title !== `${delBtn.dataset.remElem}`);
+					console.log(delBtn.dataset.remElem);
+					//____ clear the shelf ____________
+					shelf.innerHTML = '';
+					// ____ delete the selected element ________
+					myLibrary = newLibrary;
+					// ___ built a new shelf after delete ______
+					addToDom()
 				}
 			})
 			book.append(delBtn);
@@ -126,15 +129,15 @@ function reset() {
 	inputTitle.value = inputAuthor.value = inputPage.value = inputPubDate.value = inputComment.value = "";
 }
 
-function deleteButton() {
-	console.log('hello');
-	console.log(myLibrary[dataset.attBook].title)
-	if (myLibrary.includes(attBook.title)) {
-		shelf.innerHTML = '';
-		myLibrary.pop(attBook);
-		addToDom();
-	}
-}
+// function deleteButton() {
+// 	console.log('hello');
+// 	console.log(myLibrary[dataset.attBook].title)
+// 	if (myLibrary.includes(attBook.title)) {
+// 		shelf.innerHTML = '';
+// 		myLibrary.pop(attBook);
+// 		addToDom();
+// 	}
+// }
 
 
 addToDom()
