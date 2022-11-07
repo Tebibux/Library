@@ -37,15 +37,6 @@ const inputPubDate = document.getElementById('date');
 const inputComment = document.getElementById('comment');
 
 
-function Book(title, author, page, date, comment) {
-	// the constructor...
-	this.title = title;
-	this.author = author;
-	this.page = page;
-	this.date = date;
-	this.comment = comment;
-};
-
 function addBookToLibrary(title, author, page, date, comment) {
 	let newBook = new Book(title, author, page, date, comment);
 	// to resolve repetition remove all cards
@@ -120,7 +111,7 @@ function addToDom() {
 			pPara.innerText = `Page: ${books.page}`;
 			uList.append(pPara);
 			// date
-			let dPara = document.createElement('li');
+			let dPara = document.createElement('li');22
 			dPara.innerText = `Date: ${books.date}`;
 			uList.append(dPara);
 			// comment
