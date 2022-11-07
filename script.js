@@ -168,15 +168,4 @@ function reset() {
 	inputTitle.value = inputAuthor.value = inputPage.value = inputPubDate.value = inputComment.value = "";
 }
 
-// function deleteButton() {
-// 	console.log('hello');
-// 	console.log(myLibrary[dataset.attBook].title)
-// 	if (myLibrary.includes(attBook.title)) {
-// 		shelf.innerHTML = '';
-// 		myLibrary.pop(attBook);
-// 		addToDom();
-// 	}
-// }
-
-
 addToDom()
