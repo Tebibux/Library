@@ -19,6 +19,7 @@ class Book {
 // class addBookToLibrary extends Book {
 
 // }
+
 function addBookToLibrary(title, author, page, date, comment) {
 	let newBook = new Book(title, author, page, date, comment);
 	// to resolve repetition remove all cards
