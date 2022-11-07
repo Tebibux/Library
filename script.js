@@ -8,17 +8,6 @@ class Book {
 		this.comment = comment;
 	}
 }
-// function Book(title, author, page, date, comment) {
-// 	// the constructor...
-// 	this.title = title;
-// 	this.author = author;
-// 	this.page = page;
-// 	this.date = date;
-// 	this.comment = comment;
-// };
-// class addBookToLibrary extends Book {
-
-// }
 
 function addBookToLibrary(title, author, page, date, comment) {
 	let newBook = new Book(title, author, page, date, comment);
