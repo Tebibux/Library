@@ -7,19 +7,8 @@ class Book {
 		this.date = date;
 		this.comment = comment;
 	}
-}
+};
 
-function addBookToLibrary(title, author, page, date, comment) {
-	let newBook = new Book(title, author, page, date, comment);
-	// to resolve repetition remove all cards
-	if (shelf !== '') {
-		shelf.innerHTML = '';
-	}
-
-	myLibrary.push(newBook);
-	addToDom();
-
-}
 // local library array to store data 
 let myLibrary = [];
 let newLibrary = [];
@@ -37,27 +26,19 @@ const inputPubDate = document.getElementById('date');
 const inputComment = document.getElementById('comment');
 
 
-function Book(title, author, page, date, comment) {
-	// the constructor...
-	this.title = title;
-	this.author = author;
-	this.page = page;
-	this.date = date;
-	this.comment = comment;
-};
 
 function addBookToLibrary(title, author, page, date, comment) {
 	let newBook = new Book(title, author, page, date, comment);
 	// to resolve repetition remove all cards
-	if(shelf !== ''){
+	if (shelf !== '') {
 		shelf.innerHTML = '';
 	}
-	
+
 	myLibrary.push(newBook);
 	addToDom()
-	
+
 }
-function remove(){
+function remove() {
 	shelf.replaceChild()
 }
 // addBookToLibrary('T-she Hussien', 'Bogale Teferi', 195, 1990, 'scarey book');
@@ -156,5 +137,7 @@ function addToDom() {
 function reset() {
 	inputTitle.value = inputAuthor.value = inputPage.value = inputPubDate.value = inputComment.value = "";
 }
+
+
 
 addToDom()
