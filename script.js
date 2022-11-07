@@ -25,16 +25,7 @@ const inputPage = document.getElementById('page');
 const inputPubDate = document.getElementById('date');
 const inputComment = document.getElementById('comment');
 
-
-function Book(title, author, page, date, comment) {
-	// the constructor...
-	this.title = title;
-	this.author = author;
-	this.page = page;
-	this.date = date;
-	this.comment = comment;
-};
-
+// adding the element to the DOM
 function addBookToLibrary(title, author, page, date, comment) {
 	let newBook = new Book(title, author, page, date, comment);
 	// to resolve repetition remove all cards
