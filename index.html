@@ -21,19 +21,21 @@
 			<div class="main-right">
 
 				<div class="book-discription">
-					<!-- <form > -->
+					<form id="form">
+						<div class="error" id="error"></div>
 						<ul>
 							<li>
 								<label for="title">Title:</label>
-								<input type="text" name="Title" id="title" placeholder="Book Title" required>
+								<input type="text" name="Title" id="title" placeholder="Book Title" minlength="5"
+									maxlength="12" required>
 								<!-- 
-									it need to force the user to input data
-
+									it need to force the user to input data in the script file
 								 -->
 							</li>
 							<li>
 								<label for="author">Author:</label>
-								<input type="text" name="author" id="author" placeholder="author name" required>
+								<input type="text" name="author" id="author" placeholder="author name" minlength="5"
+									maxlength="12" required>
 							</li>
 							<li>
 								<label for="pages"> Pages:</label>
@@ -46,11 +48,12 @@
 							</li>
 							<li>
 								<label for="comment">Comment:</label>
-								<textarea id="comment" name="comment" required ></textarea>
+								<textarea id="comment" name="comment" required></textarea>
 							</li>
 						</ul>
-						<button id="button">Add Book</button>
-					<!-- </form> -->
+						<button type="submit" id="button">Add Book</button>
+
+					</form>
 				</div>
 
 
@@ -63,6 +66,7 @@
 			<h3>TOP: Library Project by Tebibux</h3>
 		</div>
 	</div>
+
 </body>
 
 </html>

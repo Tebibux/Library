@@ -24,7 +24,18 @@ const inputAuthor = document.getElementById('author');
 const inputPage = document.getElementById('page');
 const inputPubDate = document.getElementById('date');
 const inputComment = document.getElementById('comment');
-
+const form = document.getElementById('form');
+const error = document.getElementById('error');
+// validating the input
+function formValidate() {
+	form.addEventListener('submit', () => {
+		if ((inputTitle.value.length < 5) || (inputTitle.value.length > 12)) {
+			error.innerText = 'title length need to be in range of 5-12'
+			return true
+		}
+	});
+}
+// validating the input end
 // adding the element to the DOM
 function addBookToLibrary(title, author, page, date, comment) {
 	let newBook = new Book(title, author, page, date, comment);
@@ -50,14 +61,23 @@ button.addEventListener('click', addBook);
 function addBook() {
 	//_____________
 	if ((inputTitle.value || inputAuthor.value || inputPage.value || inputPubDate.value || inputComment.value) == "") return;
+	else if (formValidate()) return;
 	else {
-		let ttl = `${inputTitle.value}`;
-		let auth = `${inputAuthor.value}`;
-		let pg = `${inputPage.value}`;
-		let dt = `${inputPubDate.value}`;
-		let cmt = `${inputComment.value}`;
-
-		addBookToLibrary(ttl, auth, pg, dt, cmt);
+		if ((inputTitle.value === '') ||
+			(inputAuthor.value === '') ||
+			(inputPage.value === '') ||
+			(inputPubDate.value === '') ||
+			(inputComment.value === '')) {
+			return
+		}
+		else {
+			addBookToLibrary(
+				inputTitle.value,
+				inputAuthor.value,
+				inputPage.value,
+				inputPubDate.value,
+				inputComment.value);
+		};
 	}
 }
 // let index = 0;
@@ -100,7 +120,7 @@ function addToDom() {
 			pPara.innerText = `Page: ${books.page}`;
 			uList.append(pPara);
 			// date
-			let dPara = document.createElement('li');22
+			let dPara = document.createElement('li'); 22
 			dPara.innerText = `Date: ${books.date}`;
 			uList.append(dPara);
 			// comment
